@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/sidenav.css">
+    <title>Inicio</title>
+</head>
+<body>
+    <div id="sidemenu" class="menu-collapsed">
+        <!--header-->
+        <div id="header">
+            <div id="title"><span>Mi Blog</span></div>
+            <div id="menu-btns">
+                <div class="btn-hamb"></div>
+                <div class="btn-hamb"></div>
+                <div class="btn-hamb"></div>
+            </div>
+        </div>
+
+        <!--perfil-->
+        <div id="profile">
+            <div id="photo"><img src="img/test-user-profile-blue.jpg" alt="Imagen de perfil"></div>
+            <div id="profile_name"><span>Nombre de Perfil</span></div>
+        </div>
+
+        <!--elementos-->
+        <div id="menu-items">
+            <div class="item">
+                <a href="">
+                    <div class="icon"><img src="img/settings_FILL0_wght400_GRAD0_opsz24.png" alt="Icono de Elemento"></div>
+                    <div class="itm_title"><span>Elemento</span></div>
+                </a>
+            </div>
+            <div class="item sep"></div>
+            <div class="item">
+                <a href="">
+                    <div class="icon"><img src="img/settings_FILL0_wght400_GRAD0_opsz24.png" alt="Icono de Elemento"></div>
+                    <div class="itm_title"><span>Elemento</span></div>
+                </a>
+            </div>
+        </div>
+
+    </div>
+
+    <!--Contenido de la página-->
+    <div id="main-container">
+        <h1>Bienvenido!</h1>
+    </div>
+
+    <!--Javascript para plegar - desplegar menú-->
+    <script>
+        const btn = document.querySelector('#menu-btns');
+        const menu = document.querySelector('#sidemenu');
+        btn.addEventListener('click', e => {
+            menu.classList.toggle("menu-expanded");
+            menu.classList.toggle("menu-collapsed");
+            document.querySelector('body').classList.toggle("body-expanded");
+        });
+    </script>
+</body>
+</html>
